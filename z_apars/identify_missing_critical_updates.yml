@@ -69,6 +69,6 @@
 
     - name: Print json data to terminal for visual verification.
       ansible.builtin.debug:
-        msg: "{{ critupdates_output.content | freom_json }}"
+        msg: "{{ critupdates_output.content | from_json }}"
 
       
