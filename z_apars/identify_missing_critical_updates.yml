@@ -57,6 +57,5 @@
           msg: "{{ critupdates_output.content }}"
 
 
-
       
 
