@@ -62,11 +62,13 @@
           Origin: "https://{{ zmf_host }}"
         validate_certs: false
         return_content: true
-        status_code: "200"
+        status_code: "200"  
       register: critupdates_output
       delegate_to: localhost
       no_log: true
 
     - name: Print json data to terminal for visual verification.
       ansible.builtin.debug:
-        msg: "{{ critupdates_output.content }}"
+        msg: "{{ critupdates_output.content | freom_json }}"
+
+      
