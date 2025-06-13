@@ -53,7 +53,7 @@
       delegate_to: localhost
   - name: Show only JSON output
       debug:
-        msg: "{{ critupdates_output.content }}"
+         msg: "{{ critupdates_output.content }}"
 
 
       
