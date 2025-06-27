@@ -67,8 +67,8 @@
       delegate_to: localhost
       no_log: true
 
-    - name: Print json data to terminal for visual verification.
-      ansible.builtin.debug:
-        msg: "{{ critupdates_output.json | to_nice_json }}"
-
+  - name: Output for Watsonx Assistant
+    set_stats:
+    data:
+      result: "{{ critupdates_output.content | from_json }}"
       
